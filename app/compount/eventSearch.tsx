@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useRef } from "react";
-function EventSearch(props) {
+function EventSearch({ props }: { prpos: any }) {
   const yearInputRef = useRef();
   const monthInputRef = useRef();
   const handleClick = (event) => {
