@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-function EventCard(props) {
-  const { title, date, description, id, address, imgUrl } = props;
+function EventCard({ props }: { props: any }) {
+  const { title, date, id, address, imgUrl } = props;
   return (
     <div className="flex shadow-2xl shadow-black rounded-xl m-12 max-h-72 max-w-3xl hover:scale-105 duration-300">
       <img
