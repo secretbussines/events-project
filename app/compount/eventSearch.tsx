@@ -1,12 +1,17 @@
 import { useRouter } from "next/router";
 import { useRef } from "react";
-function EventSearch({ props }: { prpos: any }) {
-  const yearInputRef = useRef();
-  const monthInputRef = useRef();
-  const handleClick = (event) => {
+function EventSearch(props: any) {
+  const yearInputRef = useRef<HTMLSelectElement>(null);
+  const monthInputRef = useRef<HTMLSelectElement>(null);
+
+  const handleClick = (event: any) => {
     event.preventDefault();
-    const searchYear = yearInputRef.current.value;
-    const searchMonth = monthInputRef.current.value;
+    if (!yearInputRef.current || !monthInputRef.current) {
+      console.error("Year input not found");
+      return;
+    }
+    const searchYear = yearInputRef.current.value || "";
+    const searchMonth = monthInputRef.current.value || "";
     props.onSearch(searchYear, searchMonth);
   };
   return (

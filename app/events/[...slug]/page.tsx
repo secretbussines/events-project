@@ -1,7 +1,7 @@
 "use client";
 import { getFilteredEvents } from "@/dummy-data";
 import EventCard from "@/app/compount/eventcard";
-function FilteredEvents({ params }: { params: string }) {
+function FilteredEvents(params: any) {
   const filterdEvents = getFilteredEvents(params.slug);
   return (
     <main>

@@ -4,12 +4,11 @@ import { getAllEvents, getFeaturedEvents } from "@/dummy-data";
 import EventCard from "../compount/eventcard";
 import { useRouter } from "next/navigation";
 
-function Events({ params }: { params: any }) {
+function Events(params: any) {
   const router = useRouter();
   const featuredEvents = getAllEvents();
-  function findEventsHandler(year, month) {
+  function findEventsHandler(year: string, month: string) {
     const pathName = `events/${year}/${month}`;
-    console.log(pathName);
     router.push(pathName);
   }
   return (
