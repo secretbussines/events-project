@@ -1,6 +1,6 @@
 "use client";
 import EventSearch from "../compount/eventSearch";
-import { getAllEvents, getFeaturedEvents } from "@/dummy-data";
+import { getAllEvents, getEventById } from "@/dummy-data";
 import EventCard from "../compount/eventcard";
 import { useRouter } from "next/navigation";
 
